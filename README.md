@@ -52,26 +52,3 @@ make sure to cd into your downloads folder - or wherever you placed the .deb - a
 ```
 sudo apt install ./temp-sensor_<version>_all.deb
 ```
-The program I use for my GUI is dearpygui and that requires a manual pip installation. 
-```
-pip install dearpygui
-```
-Debian automatically stops you from installing pip packages system wide as it can cause issues with compatibility and system stability. I have never had issues with this but there is a reason Debian stops you from doing this. 
-
-Be warned.
-
-I will work on making this a non-issue in the future
-
-The way to circumvent this limitation is the tag below. 
-```
---break-system-packages
-```
-full comand
-```
-pip install dearpygui --break-system-packages
-```
-
-
-
-
-
