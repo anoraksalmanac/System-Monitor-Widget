@@ -12,6 +12,8 @@ file_gpu_edge = "/sys/class/hwmon/hwmon0/temp1_input" #may only work with dedica
 file_gpu_hotspot = "/sys/class/hwmon/hwmon0/temp2_input" #may only work with dedicated gpu, idk
 file_gpu_avrage_use_perc = "/sys/class/drm/card1/device/gpu_busy_percent" #may only work with dedicated gpu, idk
 file_gpu_mem_avrage_use_perc = "/sys/class/drm/card1/device/mem_busy_percent" #may only work with dedicated gpu, idk
+file_gpu_wattage = "/sys/class/drm/card1/device/hwmon/hwmon0/power1_average"
+
 
 file_cpu_temp_avrage = "/sys/class/hwmon/hwmon1/temp1_input"
 
