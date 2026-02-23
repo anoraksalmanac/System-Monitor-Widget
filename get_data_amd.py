@@ -11,9 +11,9 @@ lines = 10
 file_gpu_edge = "/sys/class/hwmon/hwmon0/temp1_input" #may only work with dedicated gpu, idk
 file_gpu_hotspot = "/sys/class/hwmon/hwmon0/temp2_input" #may only work with dedicated gpu, idk
 file_gpu_avrage_use_perc = "/sys/class/drm/card1/device/gpu_busy_percent" #may only work with dedicated gpu, idk
-file_gpu_mem_avrage_use_perc = "/sys/class/drm/card1/device/mem_busy_percent" #may only work with dedicated gpu, idk
+file_gpu_mem_used = "/sys/class/drm/card1/device//mem_info_vram_used" #may only work with dedicated gpu, idk
+file_gpu_mem_total = "/sys/class/drm/card1/device//mem_info_vram_total"
 file_gpu_wattage = "/sys/class/drm/card1/device/hwmon/hwmon0/power1_average"
-
 
 file_cpu_temp_avrage = "/sys/class/hwmon/hwmon1/temp1_input"
 
@@ -82,7 +82,9 @@ def get_temps ():
     gpu_hotspot = float(open(file_gpu_hotspot).read()) / 1000
     gpu_wattage = float(open(file_gpu_wattage).read()) / 1000000
     gpu_used_perc = float(open(file_gpu_avrage_use_perc).read())
-    gpu_mem_used_perc = float(open(file_gpu_mem_avrage_use_perc).read())
+    gpu_mem_used = float(open(file_gpu_mem_used).read())
+    gpu_mem_total = float(open(file_gpu_mem_total).read())
+    gpu_mem_used_perc = (gpu_mem_used/gpu_mem_total)*100
     cpu_temp = float(open(file_cpu_temp_avrage).read()) / 1000
     cpu_used = round(get_cpu(), 2)
     get_memory()
