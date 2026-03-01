@@ -50,7 +50,7 @@ I wrote this in python 3.14 however I do not believe I used any techniques speci
 - pop os "cosmic"
 
 ## installation
-This project assumes you are using a debian based system and have python and pip installed. If you are missing that software, the deb should install it but if you are just pulling the project, you will need to ensure you have that. 
+This project is compilled into a binary so you should not need to install any sort of dependencies, however you are pulling the project, make sure to have python 3.12+ installed and pip and dearpygui. 
 
 ### instructions
 I have included a .deb that should do all the installation for you. 
