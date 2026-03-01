@@ -24,6 +24,7 @@ I wrote this in python 3.14 however I do not believe I used any techniques speci
 ### current tested hardware
 * GPUs
 - AMD 5700xt
+- NVIDIA 1070 ti
 - NVIDIA 1650 mobile max-q
 - NVIDIA 1030 (ddr4 version)
 * CPUs
@@ -51,4 +52,16 @@ make sure to cd into your downloads folder - or wherever you placed the .deb - a
 
 ```
 sudo apt install ./temp-sensor_<version>_all.deb
+```
+#### APT
+I am working on an apt repo, however it is still in beta. If you would like to use it, you must use a command that forces it into your accepted repo list. You will notice that the command says trusted = yes, this exists because I have not yet added a package that verifies the security of the repo and that means you should be extremely cautious when adding repos in this manner. 
+
+##### add repo
+
+```
+echo "deb [arch=amd64 trusted=yes] https://anorak-apt-worker.anoraks-automation.workers.dev/repo stable main" | sudo tee /etc/apt/sources.list.d/myrepo.list
+```
+##### then install the program
+```
+sudo apt install temp-sensor
 ```
