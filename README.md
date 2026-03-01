@@ -51,7 +51,7 @@ I have included a .deb that should do all the installation for you as well and I
 make sure to cd into your downloads folder - or wherever you placed the .deb - and run the install command. 
 
 ```
-sudo apt install ./temp-sensor_<version>_all.deb
+sudo apt install ./temp-sensor_<version>_amd64.deb
 ```
 #### APT
 I am working on an apt repo, however it is still in beta. If you would like to use it, you must use a command that forces it into your accepted repo list. You will notice that the command says trusted = yes, this exists because I have not yet added a package that verifies the security of the repo and that means you should be extremely cautious when adding repos in this manner. 
